@@ -483,6 +483,12 @@ class InvoicesClient:
         )
         client.invoices.create_invoice_attachment(
             invoice_id="invoice_id",
+            image_file="ATTACHMENT_FILEPATH_OR_STREAM",
+            request={
+                "description": f"OPTIONAL DESCRIPTION",
+                "idempotency_key": f"REQUIRED-IDEMPOTENCY-KEY",
+            },
+
         )
         """
         response = self._raw_client.create_invoice_attachment(
